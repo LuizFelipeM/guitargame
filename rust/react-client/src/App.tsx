@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  import('wasm').then(module => {
+    const fibNum = 5
+
+    console.log('wasm.add_two_ints(100, 88)', module.add_two_ints(100, 88))
+    console.log(`wasm.fib(${fibNum})`, module.fib(fibNum))
+  })
+
   return (
     <div className="App">
       <header className="App-header">
