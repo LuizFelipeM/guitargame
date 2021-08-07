@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import waApi from './wa-api';
 import './App.css';
+import { useEffect } from 'react';
 
 // function App() {
 //   return (
@@ -23,9 +24,17 @@ import './App.css';
 //     </div>
 //   );
 // }
+
 function App() {
+  const test = async () => (await waApi).scramble('String de teste')
+
   const [value, setValue] = useState(5);
   const [result, setResult] = useState<number>();
+  const [t, setT] = useState<string | number>('')
+
+  useEffect(() => {
+    (async () => setT(await test()))()
+  }, [])
 
   return (
     <div className="App">
@@ -34,7 +43,10 @@ function App() {
         <input value={value} onChange={evt => setValue(Number(evt.target.value))} />
         is {result}
       </p>
-      <button onClick={async () => setResult((await waApi).exports.factorial(value))}>
+      <p>
+        {t}
+      </p>
+      <button onClick={async () => setResult((await waApi).factorial(value))}>
         Calculate
       </button>
     </div>

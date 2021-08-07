@@ -30,7 +30,7 @@
     "as:build:untouched": "asc assembly/index.ts --target debug",
     "as:build:optimized": "asc assembly/index.ts --target release",
     "as:build:1": "npm run asbuild:untouched && npm run asbuild:optimized",
-    "as:build": "asc assembly/index.ts -b public/as-api.wasm --target debug"
+    "as:build": "asc assembly/index.ts -b public/as-api.wasm --target debug --exportRuntime"
   },
   "eslintConfig": {
     "extends": [
