@@ -1,3 +1,4 @@
 fn main() {
-    println!("Hello, world!");
+    let value = 123;
+    println!("Hello, world! {}", value);
 }
