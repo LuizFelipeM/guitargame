@@ -1,1 +1,0 @@
-/mnt/c/Users/Luiz\ Felipe/projects-specific/guitargame/rust/wasm/target/wasm32-unknown-unknown/release/wasm.wasm: /home/mouralz/.cargo/registry/src/github.com-1ecc6299db9ec823/wasm-bindgen-0.2.75/build.rs /mnt/c/Users/Luiz\ Felipe/projects-specific/guitargame/rust/wasm/src/lib.rs
